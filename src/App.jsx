@@ -1,8 +1,13 @@
 import React from "react";
+import "./styles.scss";
+import Navbar from "./components/Navbar";
+import Content from "./components/Content";
+import Footer from "./components/Footer";
 
 export default () => (
   <>
-    <h1>Welcome to React Vite Micro App!</h1>
-    <p>Hard to get more minimal than this React app.</p>
+    <Navbar/>
+    <Content/>
+    <Footer/>
   </>
 );
