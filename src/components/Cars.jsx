@@ -98,11 +98,6 @@ const Cars = () => {
 
                 <div>
                     <p>boja automobila:</p>
-                    <p>{cars[carIndex].colorHex}</p>
-                </div>
-
-                <div>
-                    <p>Tip boje autmobila:</p>
                     <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
                         <div
                             style={{
@@ -114,6 +109,11 @@ const Cars = () => {
                         ></div>
                         <p>{cars[carIndex].colorHex}</p>
                     </div>
+                </div>
+
+                <div>
+                    <p>Tip boje autmobila:</p>
+                    
                     <p>{cars[carIndex].finish} boja</p>
                 </div>
 
