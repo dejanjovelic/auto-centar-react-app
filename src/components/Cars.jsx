@@ -1,5 +1,6 @@
 import React from "react";
 import "./../styles.scss";
+import Car from "./Car";
 
 const Cars = () => {
 
@@ -68,7 +69,6 @@ const Cars = () => {
 
     const carIndex = 0;
 
-    const carCard = document.querySelector(".car-card")
 
     return (
 
@@ -76,59 +76,9 @@ const Cars = () => {
             <div className="car-img">
                 <img id="bigCarPicture" src={cars[carIndex].image} alt="Car photo" />
             </div>
-            <div className="car-data">
 
-                <div>
-                    <p id="data-title">Izracunaj cenu svog auta iz snova</p>
-                </div>
-
-                <div>
-                    <p>Pocevsi od {formatPrice(cars[carIndex].price.fromEUR)}€</p>
-                </div>
-
-                <div>
-                    <p>model automobila:</p>
-                    <p>{cars[carIndex].model.name}</p>
-                </div>
-
-                <div>
-                    <p>Tip motora:</p>
-                    <p>{cars[carIndex].defaultEngine}</p>
-                </div>
-
-                <div>
-                    <p>boja automobila:</p>
-                    <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
-                        <div
-                            style={{
-                                width: "20px",
-                                height: "20px",
-                                backgroundColor: cars[carIndex].colorHex,
-                                border: "1px solid #ccc",
-                            }}
-                        ></div>
-                        <p>{cars[carIndex].colorHex}</p>
-                    </div>
-                </div>
-
-                <div>
-                    <p>Tip boje autmobila:</p>
-                    
-                    <p>{cars[carIndex].finish} boja</p>
-                </div>
-
-                <div>
-                    <p>opseg cene</p>
-                    <p>{formatPrice(cars[carIndex].price.fromEUR)}€ - {formatPrice(cars[carIndex].price.toEUR)}€</p>
-                </div>
-
-                <div>
-                    <p>Kontakt mail:</p>
-                    <p>primer@email.com</p>
-                </div>
-
-            </div>
-
+            <Car car={(cars[carIndex])} formatPrice = {formatPrice}/>
+            
             <div className="cars-section">
                 {cars.map((car, index) => (
                     <div
